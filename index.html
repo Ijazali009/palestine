@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Donate for Palestine and support the people affected by the crisis. Every donation counts.">
+
+    <title>Free Palestine - Boycott Israel & USA Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://c8.alamy.com/comp/2TBG3DM/free-palestine-hand-grunge-design-2TBG3DM.jpg" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --palestine-red: #ce1126;
+            --palestine-black: #000000;
+            --palestine-white: #ffffff;
+            --palestine-green: #007a3d;
+            --primary-color: var(--palestine-red);
+            --secondary-color: var(--palestine-white);
+            --accent-color: #f8d7da;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--palestine-black);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--secondary-color) !important;
+        }
+        
+        .palestine-flag {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .category-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            border: none;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .israeli-product {
+            border-left: 5px solid var(--palestine-red);
+        }
+        
+        .american-product {
+            border-left: 5px solid #3c78d8;
+        }
+        
+        .local-alternative {
+            border-left: 5px solid var(--palestine-green);
+        }
+        
+        .scan-section {
+            background-color: var(--accent-color);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        #scanner-container {
+            width: 100%;
+            height: 300px;
+            background-color: #e9ecef;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        #scanner-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .scan-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .scan-frame {
+            width: 70%;
+            height: 200px;
+            border: 3px dashed var(--palestine-red);
+            position: relative;
+        }
+        
+        footer {
+            background-color: var(--palestine-black);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .badge-israel {
+            background-color: var(--palestine-red);
+            color: white;
+        }
+        
+        .badge-usa {
+            background-color: #3c78d8;
+            color: white;
+        }
+        
+        .badge-alternative {
+            background-color: var(--palestine-green);
+            color: white;
+        }
+        
+        .tab-content {
+            padding: 20px 0;
+        }
+        
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .product-table th, .product-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .product-table th {
+            background-color: var(--palestine-black);
+            color: white;
+        }
+        
+        .product-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .solidarity-section {
+            background-color: var(--palestine-green);
+            color: white;
+            padding: 50px 0;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .donate-btn {
+            background-color: var(--palestine-red);
+            color: white;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 30px;
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .donate-btn:hover {
+            background-color: #a00d1e;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Palestine.svg/1200px-Flag_of_Palestine.svg.png" alt="Palestine Flag" class="palestine-flag">
+                Free Palestine Boycott
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products"><i class="fas fa-list me-1"></i>Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scan"><i class="fas fa-qrcode me-1"></i>Scanner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories"><i class="fas fa-tags me-1"></i>Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i>About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">BOYCOTT ISRAEL & USA</h1>
+            <p class="lead fs-3">Stand with Palestine by avoiding products that support oppression</p>
+            <div class="mt-4">
+                <a href="#scan" class="btn btn-danger btn-lg mx-2">
+                    <i class="fas fa-qrcode me-2"></i>Scan Product
+                </a>
+                <a href="#categories" class="btn btn-outline-light btn-lg mx-2">
+                    <i class="fas fa-search me-2"></i>Browse Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Scanner Section -->
+        <section id="scan" class="scan-section mb-5">
+            <h2 class="text-center mb-4"><i class="fas fa-camera me-2"></i>Product Scanner</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="scanner-container">
+                        <video id="scanner-video" playsinline></video>
+                        <div class="scan-overlay">
+                            <div class="scan-frame"></div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button id="start-scanner" class="btn btn-primary me-2">
+                            <i class="fas fa-play me-1"></i>Start Scanner
+                        </button>
+                        <button id="stop-scanner" class="btn btn-secondary" disabled>
+                            <i class="fas fa-stop me-1"></i>Stop
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Or enter barcode manually</h4>
+                    <div class="input-group mb-3">
+                        <input type="text" id="manual-barcode" class="form-control" placeholder="Enter barcode number">
+                        <button class="btn btn-primary" id="search-barcode">
+                            <i class="fas fa-search me-1"></i>Search
+                        </button>
+                    </div>
+                    <div id="scan-result" class="mt-3 p-3 bg-light rounded d-none">
+                        <h5>Scan Result</h5>
+                        <div id="product-info"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="mb-5">
+            <h2 class="text-center mb-4"><i class="fas fa-tags me-2"></i>Categories</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card category-card text-center h-100">
+                        <div class="card-body">
+                            <div class="category-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h5 class="card-title">Food & Beverages</h5>
+                            <p class="card-text">Israeli and American food products with local alternatives</p>
+                            <a href="#food" class="btn btn-outline-primary">View Products</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card category-card text-center h-100">
+                        <div class="card-body">
+                            <div class="category-icon">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <h5 class="card-title">Fashion & Apparel</h5>
+                            <p class="card-text">Clothing brands supporting Israel with alternatives</p>
+                            <a href="#fashion" class="btn btn-outline-primary">View Products</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card category-card text-center h-100">
+                        <div class="card-body">
+                            <div class="category-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h5 class="card-title">Technology</h5>
+                            <p class="card-text">Tech companies supporting Israel with alternatives</p>
+                            <a href="#tech" class="btn btn-outline-primary">View Products</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card category-card text-center h-100">
+                        <div class="card-body">
+                            <div class="category-icon">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <h5 class="card-title">Hotels & Travel</h5>
+                            <p class="card-text">Hotel chains supporting Israel to avoid       </p>
+                            <a href="#hotels" class="btn btn-outline-primary">View List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solidarity Section -->
+        <section class="solidarity-section rounded">
+            <div class="container">
+                <h2 class="display-5 fw-bold mb-4">STAND WITH PALESTINE</h2>
+                <p class="lead fs-4 mb-4">Your boycott makes a difference in the fight for justice</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <p>By boycotting these products, you're withdrawing support from companies that fund oppression and human rights violations against Palestinians. Every purchase you make is a political choice - choose justice.</p>
+                        <button class="donate-btn mt-3">
+                            <i class="fas fa-hand-holding-heart me-2"></i> <a href="payment.html" style="text-decoration: none; color: wheat;">Donate to Palestine</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="mb-5">
+            <h2 class="text-center mb-4"><i class="fas fa-list me-2"></i>Products to Boycott</h2>
+            
+            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="food-tab" data-bs-toggle="tab" data-bs-target="#food" type="button" role="tab">Food & Beverages</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="fashion-tab" data-bs-toggle="tab" data-bs-target="#fashion" type="button" role="tab">Fashion</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tech-tab" data-bs-toggle="tab" data-bs-target="#tech" type="button" role="tab">Technology</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="hotels-tab" data-bs-toggle="tab" data-bs-target="#hotels" type="button" role="tab">Hotels</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="other-tab" data-bs-toggle="tab" data-bs-target="#other" type="button" role="tab">Other</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="productTabsContent">
+                <!-- Food Tab -->
+                <div class="tab-pane fade show active" id="food" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="product-table">
+                            <thead>
+                                <tr>
+                                    <th>Product/Brand</th>
+                                    <th>Type</th>
+                                    <th>Country</th>
+                                    <th>Why Boycott?</th>
+                                    <th>Alternative</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sabra Hummus</td>
+                                    <td>Food</td>
+                                    <td><span class="badge badge-israel">Israel</span></td>
+                                    <td>Supports Israeli military</td>
+                                    <td>Local hummus brands or homemade</td>
+                                </tr>
+                                <tr>
+                                    <td>SodaStream</td>
+                                    <td>Home Appliance</td>
+                                    <td><span class="badge badge-israel">Israel</span></td>
+                                    <td>Manufactured in illegal settlements</td>
+                                    <td>Other carbonation systems</td>
+                                </tr>
+                                <tr>
+                                    <td>Ahava</td>
+                                    <td>Cosmetics</td>
+                                    <td><span class="badge badge-israel">Israel</span></td>
+                                    <td>Mined from occupied land</td>
+                                    <td>Local cosmetic brands</td>
+                                </tr>
+                                <tr>
+                                    <td>PepsiCo</td>
+                                    <td>Beverages</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Invests in Israeli companies</td>
+                                    <td>Local beverage companies</td>
+                                </tr>
+                                <tr>
+                                    <td>Starbucks</td>
+                                    <td>Coffee</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Supports Israeli policies</td>
+                                    <td>Local coffee shops</td>
+                                </tr>
+                               
+                                   
+                                    <tr>
+                                        <td>McDonald's</td>
+                                        <td>Fast Food</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported to support Israeli military</td>
+                                        <td>Howdy, Burger Lab, OPTP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>KFC</td>
+                                        <td>Fast Food</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported to have ties to Israeli businesses</td>
+                                        <td>ChickQueen, Al-Baik</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pizza Hut</td>
+                                        <td>Pizza</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported to support Israeli economy</td>
+                                        <td>Broadway Pizza, Pappasallis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Subway</td>
+                                        <td>Sandwiches</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported to contribute to Israeli economy</td>
+                                        <td>Wrap Lab, Daily Deli</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Coca-Cola</td>
+                                        <td>Beverages</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported Israeli investments</td>
+                                        <td>Pakola, Gourmet Cola, Next Cola</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PepsiCo (Pepsi, Mountain Dew)</td>
+                                        <td>Beverages</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported financial contributions to Israeli economy</td>
+                                        <td>Pakola, Gourmet Cola</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nestlé (Milkpak, Fruita Vitals, Maggi)</td>
+                                        <td>Dairy & Snacks</td>
+                                        <td><span class="badge badge-usa">Switzerland</span></td>
+                                        <td>Investments linked to Israel</td>
+                                        <td>Olper's, National Foods, Nurpur</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lays, Cheetos, Doritos</td>
+                                        <td>Snacks</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Part of PepsiCo, reported financial ties to Israel</td>
+                                        <td>Kolson, Fauji Cornflakes, Shoop by Shan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nutella, Mars, Twix, Snickers</td>
+                                        <td>Chocolates</td>
+                                        <td><span class="badge badge-usa">Italy/USA</span></td>
+                                        <td>Reported Israeli investments</td>
+                                        <td>Candyland, Young’s Chocolate Spread</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baskin Robbins</td>
+                                        <td>Ice Cream</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported business links with Israel</td>
+                                        <td>Hico, Lush Crush, Jalal Sons Ice Cream</td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Fashion Tab -->
+                <div class="tab-pane fade" id="fashion" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="product-table">
+                            <thead>
+                                <tr>
+                                    <th>Brand</th>
+                                    <th>Type</th>
+                                    <th>Country</th>
+                                    <th>Why Boycott?</th>
+                                    <th>Alternative</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              
+
+                               
+                                    <tr>
+                                        <td>Nike</td>
+                                        <td>Sportswear</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Sponsors Israeli athletes</td>
+                                        <td>Servis, Bata, Ndure, Infinity</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Adidas</td>
+                                        <td>Sportswear</td>
+                                        <td><span class="badge badge-usa">Germany</span></td>
+                                        <td>Reported investments linked to Israel</td>
+                                        <td>Starlet, Skechers Pakistan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Puma</td>
+                                        <td>Sportswear</td>
+                                        <td><span class="badge badge-usa">Germany</span></td>
+                                        <td>Sponsors Israeli teams</td>
+                                        <td>Servis, Borjan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Levi's</td>
+                                        <td>Denim & Apparel</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported Israeli investments</td>
+                                        <td>Stoneage, Outfitters, Crossroads</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zara</td>
+                                        <td>Fast Fashion</td>
+                                        <td><span class="badge badge-usa">Spain</span></td>
+                                        <td>Operations linked to Israeli business</td>
+                                        <td>Khaadi, Sapphire, Ethnic</td>
+                                    </tr>
+                                    <tr>
+                                        <td>H&M</td>
+                                        <td>Fast Fashion</td>
+                                        <td><span class="badge badge-usa">Sweden</span></td>
+                                        <td>Reported investments linked to Israel</td>
+                                        <td>Alkaram Studio, Bonanza Satrangi, Gul Ahmed</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAC Cosmetics</td>
+                                        <td>Beauty & Makeup</td>
+                                        <td><span class="badge badge-usa">Canada</span></td>
+                                        <td>Part of Estée Lauder, which supports Israeli organizations</td>
+                                        <td>WB by Hemani, Masarrat Misbah, Saeed Ghani</td>
+                                    </tr>
+                                    <tr>
+                                        <td>L’Oréal</td>
+                                        <td>Beauty & Skincare</td>
+                                        <td><span class="badge badge-usa">France</span></td>
+                                        <td>Uses Israel as its Middle East commercial hub</td>
+                                        <td>Hemani Herbals, Junaid Jamshed, Saeed Ghani</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Victoria’s Secret</td>
+                                        <td>Lingerie & Fragrances</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Reported Israeli business ties</td>
+                                        <td>J., WB by Hemani, Bonanza Perfumes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reebok</td>
+                                        <td>Sportswear</td>
+                                        <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Past financial relations with Israeli groups</td>
+                                        <td>Servis, Bata, Skechers Pakistan</td>
+                                    </tr>
+                                <
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Tech Tab -->
+                <div class="tab-pane fade" id="tech" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="product-table">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Products</th>
+                                    <th>Country</th>
+                                    <th>Why Boycott?</th>
+                                    <th>Alternative</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Google</td>
+                                    <td>Search, Android, etc.</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Provides tech to Israeli military (Project Nimbus)</td>
+                                    <td>DuckDuckGo, ProtonMail, Nextcloud</td>
+                                </tr>
+                                <tr>
+                                    <td>Microsoft</td>
+                                    <td>Windows, Office, Azure</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Provides AI/cloud services to Israeli military</td>
+                                    <td>LibreOffice, Linux, Zoho, AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>Amazon (AWS)</td>
+                                    <td>Cloud Computing, Retail</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Part of Project Nimbus with Israeli government</td>
+                                    <td>Google Cloud, DigitalOcean, Linode</td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>iPhones, MacBooks, iOS</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>R&D centers and acquisitions in Israel</td>
+                                    <td>Fairphone, Framework Laptop, LineageOS</td>
+                                </tr>
+                                <tr>
+                                    <td>Intel</td>
+                                    <td>Processors, Chips</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Major manufacturing & R&D in Israel</td>
+                                    <td>AMD, ARM, RISC-V</td>
+                                </tr>
+                                <tr>
+                                    <td>Facebook (Meta)</td>
+                                    <td>Facebook, Instagram, WhatsApp</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Acquired Israeli tech startups</td>
+                                    <td>Mastodon, Signal, MeWe</td>
+                                </tr>
+                                <tr>
+                                    <td>NVIDIA</td>
+                                    <td>GPUs, AI chips</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Acquired Mellanox (Israel), R&D in Israel</td>
+                                    <td>AMD, Intel GPUs, Qualcomm</td>
+                                </tr>
+                                <tr>
+                                    <td>HP (Hewlett-Packard)</td>
+                                    <td>Printers, Laptops, Servers</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Provides tech services to Israeli military</td>
+                                    <td>Dell, Lenovo, Epson</td>
+                                </tr>
+                                <tr>
+                                    <td>Elbit Systems</td>
+                                    <td>Defense electronics, UAVs</td>
+                                    <td><span class="badge badge-israel">Israel</span></td>
+                                    <td>Primary supplier to Israeli military</td>
+                                    <td>None (alternative: avoid direct defense contractors)</td>
+                                </tr>
+                                <tr>
+                                    <td>Xtend</td>
+                                    <td>AI drones, robotics</td>
+                                    <td><span class="badge badge-israel">Israel</span></td>
+                                    <td>Supplies AI-powered drones to Israeli military</td>
+                                    <td>DJI, Parrot, AeroVironment</td>
+                                </tr>
+                                
+                         
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Hotels Tab -->
+                <div class="tab-pane fade" id="hotels" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="product-table">
+                            <thead>
+                                <tr>
+                                    <th>Hotel Chain</th>
+                                    <th>Type</th>
+                                    <th>Country</th>
+                                    <th>Why Boycott?</th>
+                                    <th>Alternative</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hilton</td>
+                                    <td>Hotels</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Invests in Israeli properties; launching DoubleTree in Islamabad (2025)</td>
+                                    <td>Serena Hotels, Avari Hotels</td>
+                                </tr>
+                                <tr>
+                                    <td>Marriott</td>
+                                    <td>Hotels & Resorts</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Operates hotels in Israel; has locations in Karachi, Islamabad</td>
+                                    <td>Pearl Continental, Hashoo Group</td>
+                                </tr>
+                                <tr>
+                                    <td>Hyatt</td>
+                                    <td>Hotels & Resorts</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Developing hotels in Israel; launching in Lahore, Karachi, Rawalpindi</td>
+                                    <td>Hotel One (by PC), Mövenpick Pakistan</td>
+                                </tr>
+                                <tr>
+                                    <td>Accor</td>
+                                    <td>Hotels (Sofitel, Ibis, Novotel)</td>
+                                    <td><span class="badge badge-usa">France</span></td>
+                                    <td>Operates hotels in Tel Aviv & Jerusalem; runs Grand Mercure in Karachi</td>
+                                    <td>Islamabad Hotel, Ramada by Wyndham</td>
+                                </tr>
+                                <tr>
+                                    <td>Airbnb</td>
+                                    <td>Short-term rentals</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Faced backlash over listings in Israeli settlements</td>
+                                    <td>Agoda Homes, Guesthouses, Couchsurfing</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Other Tab -->
+                <div class="tab-pane fade" id="other" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="product-table">
+                            <thead>
+                                <tr>
+                                    <th>Company/Product</th>
+                                    <th>Type</th>
+                                    <th>Country</th>
+                                    <th>Why Boycott?</th>
+                                    <th>Alternative</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>General Motors (Chevrolet)</td>
+                                    <td>Automobiles</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Operates in Israel</td>
+                                    <td>Pak Suzuki, Honda Pakistan, Toyota Indus</td>
+                                </tr>
+                                <tr>
+                                    <td>Ford</td>
+                                    <td>Automobiles</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has joint ventures and partnerships in Israel</td>
+                                    <td>Atlas Honda, Pak Suzuki, KIA Pakistan</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW</td>
+                                    <td>Luxury Automobiles</td>
+                                    <td><span class="badge badge-usa">Germany</span></td>
+                                    <td>Operates in Israel</td>
+                                    <td>Mercedes-Benz, Audi (Pakistan), local luxury brands</td>
+                                </tr>
+                                <tr>
+                                    <td>Pfizer</td>
+                                    <td>Pharmaceuticals</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has partnerships with Israeli biotech firms</td>
+                                    <td>GSK (GlaxoSmithKline), Searle, Getz Pharma</td>
+                                </tr>
+                                <tr>
+                                    <td>Johnson & Johnson</td>
+                                    <td>Healthcare, Personal Care</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has operations in Israel</td>
+                                    <td>GSK (Sensodyne, Eno), local skincare brands</td>
+                                </tr>
+                                <tr>
+                                    <td>Roche</td>
+                                    <td>Pharmaceuticals</td>
+                                    <td><span class="badge badge-usa">Switzerland</span></td>
+                                    <td>Collaborates with Israeli biotech companies</td>
+                                    <td>Ferozsons Laboratories, Searle, Getz Pharma</td>
+                                </tr>
+                                <tr>
+                                    <td>Verizon</td>
+                                    <td>Telecommunications</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has operations in Israel</td>
+                                    <td>Jazz (Mobilink), Telenor Pakistan, Zong</td>
+                                </tr>
+                                <tr>
+                                    <td>AT&T</td>
+                                    <td>Telecommunications</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has operations in Israel</td>
+                                    <td>Ufone, Zong, Telenor Pakistan</td>
+                                </tr>
+                                <tr>
+                                    <td>Huawei</td>
+                                    <td>Telecommunications & Electronics</td>
+                                    <td><span class="badge badge-usa">China</span></td>
+                                    <td>Has partnerships in Israel</td>
+                                    <td>QMobile, Infinix, Oppo</td>
+                                </tr>
+                                <tr>
+                                    <td>Samsung</td>
+                                    <td>Home Appliances & Electronics</td>
+                                    <td><span class="badge badge-usa">South Korea</span></td>
+                                    <td>Operates in Israel</td>
+                                    <td>Haier, Dawlance, PEL</td>
+                                </tr>
+                                <tr>
+                                    <td>LG</td>
+                                    <td>Home Appliances & Electronics</td>
+                                    <td><span class="badge badge-usa">South Korea</span></td>
+                                    <td>Has operations in Israel</td>
+                                    <td>PEL, Orient, Dawlance</td>
+                                </tr>
+                                <tr>
+                                    <td>Whirlpool</td>
+                                    <td>Home Appliances</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has operations in Israel</td>
+                                    <td>Haier, Dawlance, PEL</td>
+                                </tr>
+                                <tr>
+                                    <td>Amazon</td>
+                                    <td>E-Commerce</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Operates in Israel</td>
+                                    <td>Daraz Pakistan, Yayvo, Local online stores</td>
+                                </tr>
+                                <tr>
+                                    <td>eBay</td>
+                                    <td>E-Commerce</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has operations in Israel</td>
+                                    <td>Daraz, HumMart, Local e-commerce stores</td>
+                                </tr>
+                                <tr>
+                                    <td>Walmart</td>
+                                    <td>Retail</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has investments and operations in Israel</td>
+                                    <td>Hyperstar (Carrefour Pakistan), Metro, Imtiaz</td>
+                                </tr>
+                                <tr>
+                                    <td>Netflix</td>
+                                    <td>Streaming Service</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Has operations in Israel</td>
+                                    <td>Local platforms: YouTube, ZEE5, Tapmad TV</td>
+                                </tr>
+                                <tr>
+                                    <td>Disney</td>
+                                    <td>Entertainment & Streaming</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                    <td>Operates in Israel</td>
+                                    <td>Local alternatives: TV One, Hum TV, Geo TV</td>
+                                </tr>
+                                <tr>
+                                    <td>Warner Bros.</td>
+                                    <td>Media & Entertainment</td>
+                                    <td><span class="badge badge-usa">USA</span></td>
+                                        <td>Has investments and operations in Israel</td>
+                                    <td>Local alternatives: Pakistani film industry, Local TV</td>
+                                </tr>
+                                                                                                                                                                                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2><i class="fas fa-info-circle me-2"></i>About This Initiative</h2>
+                    <p>This application helps identify products, companies, and services that support Israel either directly or indirectly. By boycotting these entities, we can collectively apply economic pressure to end the occupation and human rights violations against Palestinians.</p>
+                    <p>The database includes both Israeli products and international companies that have significant investments in or support for Israel.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2><i class="fas fa-handshake me-2"></i>BDS Movement</h2>
+                    <p>This app supports the Boycott, Divestment, and Sanctions (BDS) movement, a Palestinian-led movement for freedom, justice and equality.</p>
+                    <p>BDS upholds the simple principle that Palestinians are entitled to the same rights as the rest of humanity and calls for:</p>
+                    <ul>
+                        <li>Ending occupation and colonization</li>
+                        <li>Full equality for Arab-Palestinian citizens</li>
+                        <li>Respecting Palestinian refugees' right to return</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Free Palestine Boycott</h5>
+                    <p>A tool to support Palestinian rights through economic activism.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#products" class="text-white">Products List</a></li>
+                        <li><a href="#scan" class="text-white">Product Scanner</a></li>
+                        <li><a href="#about" class="text-white">About BDS</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Support Palestine</h5>
+                    <p>Consider donating to humanitarian organizations working in Palestine.</p>
+                    <button class="donate-btn">
+                        <i class="fas fa-hand-holding-heart me-2"></i><a href="payment.html" style="text-decoration: none; color: wheat;">Donate Now</a>
+                    </button>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2023 Free Palestine Boycott. All rights reserved.</p>
+                <p>AJUU GILGITY</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Instascan for QR/Barcode scanning -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/instascan/1.0.0/instascan.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function() {
+            // Comprehensive product data
+            const products = [
+            {
+        "id": "040822012345",
+        "name": "Sabra Hummus",
+        "brand": "Sabra",
+        "category": "Food",
+        "country": "israel",
+        "description": "Supports Israeli military; manufactured in occupied territories.",
+        "alternative": "Al-Safa Hummus or homemade",
+        "image": "https://via.placeholder.com/300x200?text=Sabra+Hummus"
+    },
+    {
+        "id": "729011001234",
+        "name": "SodaStream",
+        "brand": "SodaStream",
+        "category": "Home Appliance",
+        "country": "israel",
+        "description": "Manufactured in illegal Israeli settlements.",
+        "alternative": "DIY carbonation kits or local brands",
+        "image": "https://via.placeholder.com/300x200?text=SodaStream"
+    },
+    {
+        "id": "012000123456",
+        "name": "Pepsi",
+        "brand": "PepsiCo",
+        "category": "Beverage",
+        "country": "usa",
+        "description": "Invests in Israeli companies and economy.",
+        "alternative": "Pakola or Amrat Cola",
+        "image": "https://via.placeholder.com/300x200?text=Pepsi"
+    },
+    {
+        "id": "049000567890",
+        "name": "Coca-Cola",
+        "brand": "Coca-Cola",
+        "category": "Beverage",
+        "country": "usa",
+        "description": "Funds Israeli operations and partnerships.",
+        "alternative": "Gourmet Cola or Next Cola",
+        "image": "https://via.placeholder.com/300x200?text=Coca-Cola"
+    },
+    {
+        "id": "078000123456",
+        "name": "Maggi Noodles",
+        "brand": "Nestlé",
+        "category": "Food",
+        "country": "switzerland",
+        "description": "Parent company invests in Israel.",
+        "alternative": "Shan Noodles or local brands",
+        "image": "https://via.placeholder.com/300x200?text=Maggi"
+    },
+    {
+        "id": "001927654321",
+        "name": "Nike Air Force 1",
+        "brand": "Nike",
+        "category": "Footwear",
+        "country": "usa",
+        "description": "Sponsors Israeli athletes and teams.",
+        "alternative": "Servis or Borjan shoes",
+        "image": "https://via.placeholder.com/300x200?text=Nike+Air+Force"
+    },
+    {
+        "id": "040094123456",
+        "name": "Adidas Ultraboost",
+        "brand": "Adidas",
+        "category": "Footwear",
+        "country": "germany",
+        "description": "Invests in Israeli-linked ventures.",
+        "alternative": "Ndure or Bata sneakers",
+        "image": "https://via.placeholder.com/300x200?text=Adidas+Ultraboost"
+    },
+    {
+        "id": "360054789012",
+        "name": "L'Oréal Shampoo",
+        "brand": "L'Oréal",
+        "category": "Cosmetics",
+        "country": "france",
+        "description": "Uses Israel as a regional hub.",
+        "alternative": "Hemani Herbals or Saeed Ghani",
+        "image": "https://via.placeholder.com/300x200?text=L'Oreal+Shampoo"
+    },
+    {
+        "id": "885909123456",
+        "name": "iPhone 15",
+        "brand": "Apple",
+        "category": "Electronics",
+        "country": "usa",
+        "description": "R&D centers in Israel; supports Israeli tech.",
+        "alternative": "Samsung (non-Israeli models) or Infinix",
+        "image": "https://via.placeholder.com/300x200?text=iPhone+15"
+    },
+    {
+        "id": "884962789012",
+        "name": "HP Laptop",
+        "brand": "HP",
+        "category": "Electronics",
+        "country": "usa",
+        "description": "Provides tech to Israeli military.",
+        "alternative": "Dell or Lenovo (non-Israeli-linked models)",
+        "image": "https://via.placeholder.com/300x200?text=HP+Laptop"
+    },{
+        "id": "HILTON001",
+        "name": "Hilton Hotel",
+        "brand": "Hilton",
+        "category": "Hospitality",
+        "country": "usa",
+        "description": "Invests in Israeli properties.",
+        "alternative": "Serena Hotels or Pearl Continental",
+        "image": "https://via.placeholder.com/300x200?text=Hilton+Hotel"
+    },
+    {
+        "id": "AIRBNB002",
+        "name": "Airbnb",
+        "brand": "Airbnb",
+        "category": "Travel",
+        "country": "usa",
+        "description": "Lists properties in illegal settlements.",
+        "alternative": "Local guesthouses or Agoda (select non-Israeli hosts)",
+        "image": "https://via.placeholder.com/300x200?text=Airbnb"
+    },
+    {
+        "id": "498279123456",
+        "name": "Toyota Corolla",
+        "brand": "Toyota",
+        "category": "Automobile",
+        "country": "japan",
+        "description": "Manufactures in Israel.",
+        "alternative": "Honda Pakistan or Suzuki",
+        "image": "https://via.placeholder.com/300x200?text=Toyota+Corolla"
+    },
+    {
+        "id": "000340789012",
+        "name": "Pfizer Vaccine",
+        "brand": "Pfizer",
+        "category": "Pharmaceutical",
+        "country": "usa",
+        "description": "Partners with Israeli biotech firms.",
+        "alternative": "Sinopharm or local vaccines (if available)",
+        "image": "https://via.placeholder.com/300x200?text=Pfizer+Vaccine"
+    },
+                // Israeli Products
+                {
+                    id: '7290102391275',
+                    name: 'Sabra Hummus',
+                    brand: 'Sabra',
+                    category: 'Food',
+                    country: 'israel',
+                    description: 'Produced by a company that supports Israeli military',
+                    alternative: 'Local hummus brands like Al-Safa or homemade',
+                    image: 'https://via.placeholder.com/300x200?text=Sabra+Hummus'
+                },
+                {
+                    id: '7290000175486',
+                    name: 'SodaStream Machine',
+                    brand: 'SodaStream',
+                    category: 'Home Appliance',
+                    country: 'israel',
+                    description: 'Manufactured in illegal Israeli settlements',
+                    alternative: 'Traditional soda makers or other carbonation systems',
+                    image: 'https://via.placeholder.com/300x200?text=SodaStream'
+                },
+                {
+                    id: '7290109876543',
+                    name: 'Ahava Dead Sea Products',
+                    brand: 'Ahava',
+                    category: 'Cosmetics',
+                    country: 'israel',
+                    description: 'Mined from occupied Palestinian land in the West Bank',
+                    alternative: 'Local cosmetic brands or other international brands',
+                    image: 'https://via.placeholder.com/300x200?text=Ahava'
+                },
+                {
+                    id: '7296073301234',
+                    name: 'Teva Pharmaceuticals',
+                    brand: 'Teva',
+                    category: 'Medicine',
+                    country: 'israel',
+                    description: 'Largest Israeli company operating in occupied territories',
+                    alternative: 'Generic medicines or other pharmaceutical brands',
+                    image: 'https://via.placeholder.com/300x200?text=Teva'
+                },
+                
+                // American Products
+                {
+                    id: '012000116159',
+                    name: 'Pepsi',
+                    brand: 'PepsiCo',
+                    category: 'Beverage',
+                    country: 'usa',
+                    description: 'Invests heavily in Israeli companies and economy',
+                    alternative: 'Local beverage companies or other international brands',
+                    image: 'https://via.placeholder.com/300x200?text=Pepsi'
+                },
+                {
+                    id: '049000028904',
+                    name: 'Lays Chips',
+                    brand: 'PepsiCo',
+                    category: 'Snacks',
+                    country: 'usa',
+                    description: 'Part of PepsiCo which supports Israel',
+                    alternative: 'Local chip brands or homemade snacks',
+                    image: 'https://via.placeholder.com/300x200?text=Lays'
+                },
+                {
+                    id: '038000116207',
+                    name: 'Starbucks Coffee',
+                    brand: 'Starbucks',
+                    category: 'Beverage',
+                    country: 'usa',
+                    description: 'CEO supports Israeli policies and military',
+                    alternative: 'Local coffee shops or other brands',
+                    image: 'https://via.placeholder.com/300x200?text=Starbucks'
+                },
+                {
+                    id: '023700032702',
+                    name: 'Nike Shoes',
+                    brand: 'Nike',
+                    category: 'Footwear',
+                    country: 'usa',
+                    description: 'Sponsors Israeli athletes and teams',
+                    alternative: 'Local footwear brands or other international brands',
+                    image: 'https://via.placeholder.com/300x200?text=Nike'
+                },
+                
+                // Local Alternatives
+                {
+                    id: '1234567890123',
+                    name: 'Pak Olive Oil',
+                    brand: 'Pak Olive',
+                    category: 'Food',
+                    country: 'local',
+                    description: 'Produced locally in Pakistan',
+                    alternative: '',
+                    image: 'https://via.placeholder.com/300x200?text=Pak+Olive+Oil'
+                }
+            ];
+
+            // Barcode scanner functionality
+            let scanner = null;
+            $('#start-scanner').click(function() {
+                $('#scanner-video').show();
+                scanner = new Instascan.Scanner({ 
+                    video: document.getElementById('scanner-video'),
+                    mirror: false 
+                });
+                
+                scanner.addListener('scan', function(content) {
+                    console.log('Scanned:', content);
+                    findProductByBarcode(content);
+                });
+                
+                Instascan.Camera.getCameras().then(function(cameras) {
+                    if (cameras.length > 0) {
+                        scanner.start(cameras[0]);
+                        $('#start-scanner').prop('disabled', true);
+                        $('#stop-scanner').prop('disabled', false);
+                    } else {
+                        alert('No cameras found.');
+                    }
+                }).catch(function(e) {
+                    console.error(e);
+                    alert('Error accessing camera: ' + e);
+                });
+            });
+
+            $('#stop-scanner').click(function() {
+                if (scanner) {
+                    scanner.stop();
+                    $('#scanner-video').hide();
+                    $('#start-scanner').prop('disabled', false);
+                    $('#stop-scanner').prop('disabled', true);
+                }
+            });
+
+            // Manual barcode search
+            $('#search-barcode').click(function() {
+                const barcode = $('#manual-barcode').val();
+                if (barcode) {
+                    findProductByBarcode(barcode);
+                } else {
+                    alert('Please enter a barcode number');
+                }
+            });
+
+            $('#manual-barcode').keypress(function(e) {
+                if (e.which === 13) {
+                    $('#search-barcode').click();
+                }
+            });
+
+            // Function to find product by barcode
+            function findProductByBarcode(barcode) {
+                const product = products.find(p => p.id === barcode);
+                $('#scan-result').removeClass('d-none');
+                
+                if (product) {
+                    let badgeClass, badgeText;
+                    if (product.country === 'israel') {
+                        badgeClass = 'badge-israel';
+                        badgeText = 'Israeli Product';
+                    } else if (product.country === 'usa') {
+                        badgeClass = 'badge-usa';
+                        badgeText = 'American Product';
+                    } else {
+                        badgeClass = 'badge-alternative';
+                        badgeText = 'Local Alternative';
+                    }
+                    
+                    let html = `
+                        <div class="card mb-3 ${product.country === 'israel' ? 'israeli-product' : 
+                            (product.country === 'usa' ? 'american-product' : 'local-alternative')}">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="${product.image}" class="img-fluid rounded-start" alt="${product.name}">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${product.name}</h5>
+                                        <p class="card-text">${product.brand} - ${product.category}</p>
+                                        <span class="badge ${badgeClass} mb-2">${badgeText}</span>
+                                        <p class="card-text">${product.description}</p>
+                                        ${product.alternative ? 
+                                            `<p class="card-text"><strong>Alternative:</strong> ${product.alternative}</p>` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    $('#product-info').html(html);
+                } else {
+                    $('#product-info').html(`
+                        <div class="alert alert-info">
+                            <h5>Product not found in database</h5>
+                            <p>This product (barcode: ${barcode}) is not currently in our database.</p>
+                            <p>If you believe this is an Israeli or American product supporting Israel, please contact us to add it.</p>
+                        </div>
+                    `);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

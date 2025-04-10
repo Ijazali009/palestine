@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate for Palestine</title>
+  <meta name="description" content="Donate for Palestine and support the people affected by the crisis. Every donation counts.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="https://c8.alamy.com/comp/2TBG3DM/free-palestine-hand-grunge-design-2TBG3DM.jpg" type="image/x-icon">
+  
+
+  <style>
+    /* Background using four horizontal sections with the Palestine flag's colors */
+    body {
+      background: linear-gradient(to bottom, 
+          #000000 25%,  /* Black */
+          #ffffff 25%,  /* White */
+          #ffffff 50%,  /* White */
+          #008000 50%,  /* Green */
+          #008000 75%,  /* Green */
+          #d61e3c 75%, /* Red */
+          #d61e3c 100%); /* Red */
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      background-size: cover;
+    }
+
+    .donation-box {
+      background: rgba(255, 255, 255, 0.9); /* Light background for better readability */
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d61e3c; /* Red color for the header */
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    .payment-method {
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fafafa;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .payment-method:hover {
+      background-color: #f7f7f7;
+      border-color: #0d6efd;
+    }
+
+    .payment-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .payment-logo {
+      height: 40px;
+    }
+
+    .copy-btn {
+      font-size: 14px;
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    .method-info p {
+      margin: 5px 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .method-info p strong {
+      color: #555;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.875rem;
+      color: #888;
+    }
+
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .donation-box {
+        padding: 30px;
+      }
+
+      .payment-logo {
+        height: 35px;
+      }
+    }
+
+    .copy-message {
+      display: none;
+      color: green;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .number-text {
+      display: none; /* Hide the number text initially */
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .back-to-home-btn {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #fff;
+      background-color: #0d6efd;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .back-to-home-btn:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="donation-box">
+    <div>
+      <h1>Donate for Palestine 🇵🇸</h1>
+      <p class="lead">Your support helps those affected by the crisis in Palestine. Every donation counts. Please donate using one of the methods below.</p>
+    </div>
+
+    <!-- JazzCash -->
+    <div class="payment-method">
+      <div class="payment-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/JazzCash_logo_%282025%29.png" alt="JazzCash" class="payment-logo">
+        <button class="btn btn-outline-primary btn-sm copy-btn" onclick="copyNumber('jazzcash-number', 'jazzcash-message')">Copy Account Number</button>
+      </div>
+      <div class="method-info">
+        <p><strong>Account Title (Name):</strong> IJAZ ALI</p>
+        <p id="jazzcash-number" class="number-text">03184834180</p> <!-- Initially hidden number -->
+        <p id="jazzcash-message" class="copy-message">Number copied successfully!</p> <!-- Success message -->
+      </div>
+    </div>
+
+    <!-- EasyPaisa -->
+    <div class="payment-method">
+      <div class="payment-header">
+        <img src="https://crystalpng.com/wp-content/uploads/2024/10/Easypaisa-logo.png" alt="EasyPaisa" class="payment-logo">
+        <button class="btn btn-outline-primary btn-sm copy-btn" onclick="copyNumber('easypaisa-number', 'easypaisa-message')">Copy Account Number</button>
+      </div>
+      <div class="method-info">
+        <p><strong>Account Title (Name):</strong> IJAZ ALI</p>
+        <p id="easypaisa-number" class="number-text">03494260290</p> <!-- Initially hidden number -->
+        <p id="easypaisa-message" class="copy-message">Number copied successfully!</p> <!-- Success message -->
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>For any queries, contact us on WhatsApp: <strong>03494260290</strong></p>
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-to-home-btn">Back to Home</a>
+  </div>
+
+  <!-- Script for Copy Button -->
+  <script>
+    function copyNumber(numberId, messageId) {
+      const number = document.getElementById(numberId);
+      const message = document.getElementById(messageId);
+
+      // Reveal the number text
+      number.style.display = 'block';
+
+      // Use the Clipboard API to copy the number to the clipboard
+      navigator.clipboard.writeText(number.textContent).then(() => {
+        // Show the copied message
+        message.style.display = 'block';
+
+        // Hide the message after 2 seconds
+        setTimeout(() => {
+          message.style.display = 'none';
+        }, 2000);
+      }).catch(err => {
+        console.error('Error copying text: ', err);
+        alert('Failed to copy text.');
+      });
+    }
+  </script>
+
+</body>
+</html>
